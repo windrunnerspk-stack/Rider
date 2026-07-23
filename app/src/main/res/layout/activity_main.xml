@@ -58,14 +58,14 @@
             android:textColor="@color/text"
             android:textSize="14sp"
             android:lineSpacingExtra="4dp"
-            android:text="Escribe tu clave del API de Anthropic, guárdala y enciende el sistema.\n\nLuego di: «Rider» y te responderá «Dime, Diego».\n"/>
+            android:text="Pega tu clave gratuita de Google AI Studio, guárdala y enciende el sistema.\n\nLuego di: «Rider» y te responderá «Dime, Diego».\n"/>
     </ScrollView>
 
     <EditText
         android:id="@+id/apiKey"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Clave API de Anthropic (sk-ant-…)"
+        android:hint="Clave gratuita de Google AI Studio (AIza…)"
         android:textColorHint="@color/dim"
         android:textColor="@color/text"
         android:inputType="textPassword"
