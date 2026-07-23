@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="R I D E R"
+            android:textColor="@color/ice"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.3"/>
+
+        <TextView
+            android:id="@+id/clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--:--:--"
+            android:textColor="@color/ice"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SISTEMA APAGADO"
+        android:textColor="@color/dim"
+        android:textSize="12sp"
+        android:letterSpacing="0.25"
+        android:gravity="center"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/panel"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4dp"
+            android:text="Escribe tu clave del API de Anthropic, guárdala y enciende el sistema.\n\nLuego di: «Rider» y te responderá «Dime, Diego».\n"/>
+    </ScrollView>
+
+    <EditText
+        android:id="@+id/apiKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Clave API de Anthropic (sk-ant-…)"
+        android:textColorHint="@color/dim"
+        android:textColor="@color/text"
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="6dp">
+
+        <Button
+            android:id="@+id/saveKey"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Guardar clave"/>
+
+        <Button
+            android:id="@+id/toggle"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Encender"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/cmd"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="O escríbele a Rider…"
+            android:textColorHint="@color/dim"
+            android:textColor="@color/text"/>
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enviar"/>
+    </LinearLayout>
+</LinearLayout>
